@@ -11,7 +11,7 @@ const About = () => {
               About <span className="text-gradient">Me</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Passionate Machine Learning Engineer with 4+ years of experience transforming complex data into intelligent solutions
+              Passionate Machine Learning Engineer with 3+ years of experience transforming complex data into intelligent solutions
             </p>
           </div>
 
@@ -27,7 +27,7 @@ const About = () => {
                     <h3 className="text-2xl font-bold">Professional Journey</h3>
                   </div>
                   <p className="text-foreground/80 leading-relaxed">
-                    With over 4 years of comprehensive experience spanning AI/ML development, data engineering, 
+                    With over 3 years of comprehensive experience spanning AI/ML development, data engineering, 
                     and software development, I specialize in building intelligent systems that drive real business impact.
                   </p>
                   <p className="text-foreground/80 leading-relaxed">
@@ -95,18 +95,6 @@ const About = () => {
                       </h4>
                       <p className="text-foreground/80 font-medium">University of Jammu</p>
                     </div>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Profile Image Placeholder */}
-              <Card className="gradient-card p-8 border-border/50 shadow-lg">
-                <div className="aspect-square rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <div className="text-center space-y-2">
-                    <div className="h-24 w-24 rounded-full bg-primary/30 mx-auto flex items-center justify-center">
-                      <span className="text-4xl font-bold text-primary">TV</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">Professional Photo</p>
                   </div>
                 </div>
               </Card>

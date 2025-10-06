@@ -1,29 +1,21 @@
-import { Quote, Star } from 'lucide-react';
+import { Quote } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 const testimonials = [
   {
-    name: 'John Smith',
-    role: 'CTO',
-    company: 'Tech Solutions Inc',
+    name: 'Dr. Kridsada TosakParalerd',
+    role: 'Chief Executive Officer',
+    company: 'Tomorrow Smile Digital Healthcare Ltd.',
     content:
-      'Tejasaw demonstrated exceptional expertise in machine learning and delivered outstanding results on our LLM optimization project. His technical skills and problem-solving abilities are truly impressive.',
+      'Mr. Verma has shown exceptional skill and dedication during his tenure with us as an intern Machine Learning developer. During his internship, Mr. Verma exhibited a comprehensive understanding of software development principles and applying his knowledge in machine learning algorithms and data analysis to enhance our software solutions. His proficiency in python enabled him to deploy advanced machine learning models, significantly improving our orthodontic treatment planning software, reflecting both his technical proficiency and his commitment to advancing healthcare technologies. Beyond his technical skills, Mr. Verma has proven himself a reliable team member, often going beyond his assigned duties to assist colleagues and contribute to a positive working environment. His proactive approach and willingness to share knowledge have been invaluable to our team. Mr. Vermas blend of skills, experience, and dedication makes him an excellent candidate for any role in software engineering. I am confident that he will bring success and innovation to his future endeavors',
     rating: 5,
   },
   {
-    name: 'Sarah Johnson',
-    role: 'Data Science Manager',
-    company: 'Innovation Labs',
+    name: 'Dr. Channarong Intahchamphoo',
+    role: 'Professor of School of Engineering Design and Teaching Innovation',
+    company: 'University of Ottawa',
     content:
-      'Working with Tejasaw was a pleasure. His deep understanding of PyTorch and ability to implement complex neural networks helped us achieve breakthrough results in our medical AI project.',
-    rating: 5,
-  },
-  {
-    name: 'Michael Chen',
-    role: 'Engineering Director',
-    company: 'DataFlow Systems',
-    content:
-      'Tejasaw\'s expertise in data engineering and cloud deployment is outstanding. He built robust pipelines that transformed our data infrastructure and significantly improved our analytics capabilities.',
+      'Tejasaw combines strong technical skills, exceptional soft skills, and a passion for innovation. In my AI Ethics research course, he has conducted impactful research on AI in dentistry, focusing on patient privacy and trust, and applied his expertise during internship with Tomorrow Smile (AI-powered dentistry). Currently, Tejasaw is interning with Indigenous Box Inc. (an award-winning e-commerce platform creating social impact for Indigenous communities across Canada).\n\nTejasaw\'s mix of technical expertise, ethical insight, and social awareness makes him an incredible asset. Connect with him or reach out to me for more details!',
     rating: 5,
   },
 ];
@@ -35,14 +27,11 @@ const Testimonials = () => {
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold">
-              Client <span className="text-gradient">Testimonials</span>
+              <span className="text-gradient">Testimonials</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
-              What people say about working with me
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {testimonials.map((testimonial, index) => (
               <Card
                 key={testimonial.name}
@@ -54,9 +43,6 @@ const Testimonials = () => {
                   <div className="flex items-center justify-between">
                     <Quote className="h-8 w-8 text-primary/30" />
                     <div className="flex gap-1">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                      ))}
                     </div>
                   </div>
 

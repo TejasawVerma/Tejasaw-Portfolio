@@ -1,47 +1,21 @@
-import { Mail, Phone, Linkedin, Send } from 'lucide-react';
+import { Mail, Phone, Linkedin } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
-import { useState } from 'react';
+import { useEffect } from 'react';
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: 'Missing Information',
-        description: 'Please fill in all required fields.',
-        variant: 'destructive',
-      });
-      return;
-    }
-
-    // In a real app, this would send the form data to a backend
-    toast({
-      title: 'Message Sent!',
-      description: 'Thank you for reaching out. I will get back to you soon.',
-    });
-
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
+  // Load Calendly script once when component mounts
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <section id="contact" className="py-20 md:py-32 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-12">
+          {/* Section Title */}
           <div className="text-center space-y-4 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold">
               Get In <span className="text-gradient">Touch</span>
@@ -51,8 +25,9 @@ const Contact = () => {
             </p>
           </div>
 
+          {/* Grid: Contact Info + Calendly */}
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Contact Information */}
+            {/* Left Column: Contact Information */}
             <div className="space-y-6 animate-slide-up">
               <Card className="gradient-card p-8 border-border/50 shadow-lg">
                 <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
@@ -101,73 +76,16 @@ const Contact = () => {
               </Card>
             </div>
 
-            {/* Contact Form */}
-            <Card className="gradient-card p-8 border-border/50 shadow-lg animate-slide-up" style={{ animationDelay: '0.1s' }}>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
-                    Name *
-                  </label>
-                  <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Your name"
-                    className="bg-background border-border"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    Email *
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="your.email@example.com"
-                    className="bg-background border-border"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium">
-                    Subject
-                  </label>
-                  <Input
-                    id="subject"
-                    value={formData.subject}
-                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    placeholder="What's this about?"
-                    className="bg-background border-border"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
-                    Message *
-                  </label>
-                  <Textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Your message..."
-                    rows={5}
-                    className="bg-background border-border resize-none"
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow"
-                >
-                  <Send className="mr-2 h-5 w-5" />
-                  Send Message
-                </Button>
-              </form>
-            </Card>
+            {/* Right Column: Calendly Widget */}
+            <div className="animate-slide-up" style={{ animationDelay: '0.1s' }}>
+              <Card className="gradient-card p-0 border-border/50 shadow-lg">
+                <div
+                  className="calendly-inline-widget"
+                  data-url="https://calendly.com/tejasawverma-v/30min?primary_color=25c3c3"
+                  style={{ minWidth: '320px', height: '700px' }}
+                ></div>
+              </Card>
+            </div>
           </div>
         </div>
       </div>

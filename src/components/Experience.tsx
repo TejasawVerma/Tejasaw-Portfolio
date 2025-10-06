@@ -87,7 +87,7 @@ const Experience = () => {
                     </div>
 
                     <div className={`md:grid md:grid-cols-2 gap-8 ${isEven ? '' : 'md:direction-rtl'}`}>
-                      <div className={isEven ? 'md:text-right' : 'md:col-start-2'}>
+                      <div className={isEven ? 'md:text-left' : 'md:col-start-2'}>
                         <Card className="gradient-card p-6 md:p-8 border-border/50 shadow-lg hover:shadow-glow transition-all duration-300">
                           <div className="flex items-start gap-4 mb-4">
                             <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">

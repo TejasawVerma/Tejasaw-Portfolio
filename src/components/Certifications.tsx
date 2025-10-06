@@ -4,24 +4,46 @@ import { Button } from '@/components/ui/button';
 
 const certifications = [
   {
+    title: 'Microsoft Azure Data Fundamentals - DP900',
+    description:
+      'Relational/non-relational data concepts, Azure data services (SQL Database, Cosmos DB, Synapse Analytics)',
+    link: 
+      'https://learn.microsoft.com/en-us/users/tejasawverma-5400/credentials/5666c67d1eab67ef?ref=https%3A%2F%2Fwww.linkedin.com%2F',  
+  },
+  {
+    title: 'Microsoft Azure Fundamentals - AZ900',
+    description:
+      'Azure core services (compute, networking, storage), pricing models, and cloud security/compliance fundamentals.',
+    link: 
+      'https://learn.microsoft.com/en-us/users/tejasawverma-4217/credentials/eaed4273b7f1acbf?ref=https%3A%2F%2Fwww.linkedin.com%2F',  
+  },
+  {
     title: 'Artificial Intelligence Foundations: Machine Learning',
     description:
       'Supervised/unsupervised learning algorithms, model evaluation metrics, training/testing ML models, and ML project lifecycle',
+    link: 
+      'https://www.linkedin.com/learning/certificates/7fcae711a9de7b8e399dd71738d6c4c7da721e2f5c6d02a20632ba5132041ff1',  
   },
   {
     title: 'Machine Learning Foundations: Linear Algebra',
     description:
       'Vector/matrix operations, linear transformations, eigenvalues and eigenvectors for dimensionality reduction',
+    link: 
+      'https://www.linkedin.com/learning/certificates/beb4e9594766c6b19a35bdf4aa82ebc3ed61e8c09065ee5d57a824f0ced6869f',
   },
   {
     title: 'Machine Learning Foundations: Calculus',
     description:
       'Derivatives for backpropagation, gradient descent optimization, and calculus applications in neural networks',
+    link: 
+      'https://www.linkedin.com/learning/certificates/936e2a06022629dcedcde975512c070a8c984369ad872392d0ace236b9caa7b8',  
   },
   {
     title: 'Machine Learning Foundations: Probability',
     description:
       'Probability distributions for statistical modeling, Bayesian inference, and probabilistic machine learning',
+    link: 
+      'https://www.linkedin.com/learning/certificates/3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7g8h9i0j1k2l3m4n',
   },
 ];
 
@@ -54,7 +76,11 @@ const Certifications = () => {
                   <div className="flex-1 space-y-3">
                     <h3 className="text-lg font-bold leading-tight">{cert.title}</h3>
                     <p className="text-sm text-foreground/70 leading-relaxed">{cert.description}</p>
-
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                     <Button
                       variant="link"
                       className="text-primary hover:text-primary/80 p-0 h-auto"
@@ -62,6 +88,7 @@ const Certifications = () => {
                       <ExternalLink className="mr-2 h-4 w-4" />
                       View Certificate
                     </Button>
+                    </a>
                   </div>
                 </div>
               </Card>

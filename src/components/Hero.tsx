@@ -1,6 +1,7 @@
 import { Mail, Phone, Linkedin, FileDown, ArrowDown, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-bg.jpg';
+import headshotImage from '@/assets/headshot.jpg';
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -25,8 +26,12 @@ const Hero = () => {
           {/* Professional Headshot Placeholder */}
           <div className="flex justify-center mb-8">
             <div className="relative group">
-              <div className="h-48 w-48 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center shadow-lg border-4 border-background">
-                <User className="h-24 w-24 text-primary/40" />
+              <div className="h-48 w-48 rounded-full overflow-hidden shadow-lg border-4 border-background">
+                  <img
+                    src={headshotImage}
+                    alt="Tejasaw Verma Headshot"
+                    className="w-full h-full object-cover"
+                  />
               </div>
               <div className="absolute inset-0 rounded-full border-4 border-primary/20 animate-pulse"></div>
             </div>
@@ -37,7 +42,7 @@ const Hero = () => {
               Tejasaw <span className="text-gradient">Verma</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-              Machine Learning Engineer | AI Analyst | Data Scientist
+              Machine Learning & Data Engineer
             </p>
           </div>
 
@@ -72,10 +77,10 @@ const Hero = () => {
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <Button
               size="lg"
-              onClick={() => scrollToSection('#projects')}
+              onClick={() => scrollToSection('#experience')}
               className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow"
             >
-              View Projects
+              View Experience
             </Button>
             <Button
               size="lg"
@@ -88,6 +93,13 @@ const Hero = () => {
             >
               <FileDown className="mr-2 h-5 w-5" />
               Download Resume
+            </Button>
+            <Button
+              size="lg"
+              onClick={() => scrollToSection('#contact')}
+              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow"
+            >
+              Connect With Me
             </Button>
           </div>
 
