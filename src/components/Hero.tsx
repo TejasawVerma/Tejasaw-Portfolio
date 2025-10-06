@@ -1,4 +1,4 @@
-import { Mail, Phone, Linkedin, FileDown, ArrowDown } from 'lucide-react';
+import { Mail, Phone, Linkedin, FileDown, ArrowDown, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-bg.jpg';
 
@@ -9,22 +9,31 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-secondary/30 to-background">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 z-0 opacity-5">
         <img
           src={heroImage}
           alt="Hero Background"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background"></div>
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 pt-20">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
+          {/* Professional Headshot Placeholder */}
+          <div className="flex justify-center mb-8">
+            <div className="relative group">
+              <div className="h-48 w-48 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center shadow-lg border-4 border-background">
+                <User className="h-24 w-24 text-primary/40" />
+              </div>
+              <div className="absolute inset-0 rounded-full border-4 border-primary/20 animate-pulse"></div>
+            </div>
+          </div>
+
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground">
               Tejasaw <span className="text-gradient">Verma</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground font-medium">
