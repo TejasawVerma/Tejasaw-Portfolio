@@ -1,6 +1,6 @@
 import { Mail, Phone, Linkedin, FileDown, ArrowDown, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/hero-bg.jpg';
+import heroImage from '@/assets/hero-bg.png';
 import headshotImage from '@/assets/headshot.jpg';
 
 const Hero = () => {
@@ -26,7 +26,7 @@ const Hero = () => {
           {/* Professional Headshot Placeholder */}
           <div className="flex justify-center mb-8">
             <div className="relative group">
-              <div className="h-48 w-48 rounded-full overflow-hidden shadow-lg border-4 border-background">
+              <div className="h-72 w-72 rounded-full overflow-hidden shadow-lg border-4 border-background">
                   <img
                     src={headshotImage}
                     alt="Tejasaw Verma Headshot"

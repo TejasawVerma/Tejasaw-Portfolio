@@ -35,28 +35,27 @@ const Testimonials = () => {
             {testimonials.map((testimonial, index) => (
               <Card
                 key={testimonial.name}
-                className="gradient-card p-6 md:p-8 border-border shadow-lg hover:shadow-glow transition-all duration-300 animate-slide-up"
+                className="gradient-card p-6 md:p-8 border-border shadow-lg hover:shadow-glow transition-all duration-300 animate-slide-up flex flex-col justify-between h-full"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="space-y-4">
+                {/* Content area */}
+                <div className="flex-1 space-y-4">
                   {/* Quote Icon */}
                   <div className="flex items-center justify-between">
                     <Quote className="h-8 w-8 text-primary/30" />
-                    <div className="flex gap-1">
-                    </div>
                   </div>
 
-                  {/* Content */}
+                  {/* Testimonial Text */}
                   <p className="text-foreground/80 leading-relaxed italic">
                     "{testimonial.content}"
                   </p>
+                </div>
 
-                  {/* Author */}
-                  <div className="pt-4 border-t border-border">
-                    <p className="font-bold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-primary font-medium">{testimonial.role}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.company}</p>
-                  </div>
+                {/* Author - move outside flex-1 so it stays at the bottom */}
+                <div className="pt-4 border-t border-border">
+                  <p className="font-bold text-foreground">{testimonial.name}</p>
+                  <p className="text-sm text-primary font-medium">{testimonial.role}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.company}</p>
                 </div>
               </Card>
             ))}

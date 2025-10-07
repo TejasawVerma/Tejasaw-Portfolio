@@ -52,7 +52,7 @@ const About = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                      <span className="text-foreground/80">Deep learning with PyTorch & Hugging Face</span>
+                      <span className="text-foreground/80">Deep learning with PyTorch</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>

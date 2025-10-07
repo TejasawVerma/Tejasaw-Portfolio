@@ -2,6 +2,7 @@ import { FileText, ExternalLink } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import Project1_Image from '@/assets/image.png';
 
 const Projects = () => {
   return (
@@ -19,8 +20,16 @@ const Projects = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Featured Project */}
-            <Card className="md:col-span-2 gradient-card p-8 border-border/50 shadow-lg hover:shadow-glow transition-all duration-300 animate-slide-up">
-              <div className="flex items-start gap-6">
+            <Card className="md:col-span-2 p-8 border-border/50 shadow-lg hover:shadow-glow transition-all duration-300 animate-slide-up relative overflow-hidden">
+            {/* Background Image */}
+              <div className="absolute inset-0 z-0 opacity-10">
+                <img
+                  src={Project1_Image}
+                  alt="Project Background"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex items-start gap-6 relative z-10">
                 <div className="h-16 w-16 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <FileText className="h-8 w-8 text-primary" />
                 </div>
