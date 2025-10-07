@@ -26,7 +26,7 @@ const Hero = () => {
           {/* Professional Headshot Placeholder */}
           <div className="flex justify-center mb-8">
             <div className="relative group">
-              <div className="h-72 w-72 rounded-full overflow-hidden shadow-lg border-4 border-background">
+              <div className="h-64 w-64 rounded-full overflow-hidden shadow-lg border-4 border-background">
                   <img
                     src={headshotImage}
                     alt="Tejasaw Verma Headshot"
