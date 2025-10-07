@@ -87,8 +87,12 @@ const Hero = () => {
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               onClick={() => {
+                const link = document.createElement('a');
+                link.href = 'https://drive.google.com/uc?export=download&id=1S1J97vdh1Zaer28Ha3ZPnPOhw4m_Rimo'; // replace with your file URL
+                link.download = 'Tejasaw_Verma_Resume.docx'; // optional: specify the filename
+                link.click();
                 // In a real app, this would download the actual resume file
-                alert('Resume download functionality would be implemented here');
+                // alert('Resume download functionality would be implemented here');
               }}
             >
               <FileDown className="mr-2 h-5 w-5" />

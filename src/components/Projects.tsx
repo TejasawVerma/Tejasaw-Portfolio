@@ -29,17 +29,18 @@ const Projects = () => {
                   <div>
                     <div className="flex items-start justify-between gap-4 mb-2">
                       <h3 className="text-2xl md:text-3xl font-bold">
-                        AI Neural Networks Research Paper
+                        AI & Neural Networks Research in Medical Diagnostics
                       </h3>
                       <Badge className="bg-primary text-primary-foreground">Featured</Badge>
                     </div>
-                    <p className="text-primary font-semibold">University of Ottawa</p>
+                    <p className="text-primary font-semibold">University of Ottawa, <span className="text-black">Under the guidance of Dr. Channarong Intahchamphoo</span>
+                    </p>
                   </div>
 
                   <p className="text-foreground/80 leading-relaxed">
                     Conducted comprehensive literature review on AI neural networks in medical diagnostics 
                     and treatment planning. The research focuses on advanced data preprocessing techniques, 
-                    feature engineering methodologies, and deep learning approaches for healthcare applications. 
+                    feature engineering methodologies, and deep learning approaches for dental healthcare applications. 
                     Special emphasis on evaluating ethical considerations including data privacy, algorithmic 
                     bias, and socioeconomic factors affecting model effectiveness in real-world medical settings.
                   </p>
@@ -55,6 +56,7 @@ const Projects = () => {
                   <Button
                     variant="outline"
                     className="border-primary text-primary hover:bg-primary hover:text-primary-foreground mt-4"
+                    onClick={() => window.open("https://uottawa-my.sharepoint.com/personal/tverm027_uottawa_ca/_layouts/15/guestaccess.aspx?share=ERVoW-BVPSVPlaMhac4sLukBQN8NHrMOX3er3bA2pvZ6MQ&e=TMsjBr", "_blank")}
                   >
                     <ExternalLink className="mr-2 h-4 w-4" />
                     View Research
