@@ -1,44 +1,77 @@
-import { Code, Brain, Cloud, Database, Wrench, Users } from 'lucide-react';
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { Code, Brain, Cloud, Database, Wrench, Users } from "lucide-react";
+import { GraduationCap, Briefcase } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const skillCategories = [
   {
-    title: 'Programming & Libraries',
+    title: "Programming & Libraries",
     icon: Code,
-    skills: ['Python', 'NumPy', 'Pandas', 'Scikit-learn', 'Matplotlib', 'Seaborn', 'VTK', 'SQL'],
-  },
-  {
-    title: 'Machine Learning',
-    icon: Brain,
     skills: [
-      'Supervised Learning',
-      'Unsupervised Learning',
-      'Deep Learning',
-      'PyTorch',
-      'Hugging Face',
-      'LLM Optimization',
+      "Python",
+      "NumPy",
+      "Pandas",
+      "Scikit-learn",
+      "Matplotlib",
+      "Seaborn",
+      "VTK",
+      "SQL",
     ],
   },
   {
-    title: 'Cloud & MLOps',
+    title: "Machine Learning",
+    icon: Brain,
+    skills: [
+      "Supervised Learning",
+      "Unsupervised Learning",
+      "Deep Learning",
+      "PyTorch",
+      "Hugging Face",
+      "LLM Optimization",
+    ],
+  },
+  {
+    title: "Cloud & MLOps",
     icon: Cloud,
-    skills: ['Azure ML', 'Azure Databricks', 'Docker', 'Prometheus', 'Grafana', 'Azure Functions'],
+    skills: [
+      "Azure ML",
+      "Azure Databricks",
+      "Docker",
+      "Prometheus",
+      "Grafana",
+      "Azure Functions",
+    ],
   },
   {
-    title: 'Data Processing',
+    title: "Data Processing",
     icon: Database,
-    skills: ['Data Preprocessing', 'Data Cleaning', 'Feature Engineering', 'ETL Pipelines'],
+    skills: [
+      "Data Preprocessing",
+      "Data Cleaning",
+      "Feature Engineering",
+      "ETL Pipelines",
+    ],
   },
   {
-    title: 'Tools',
+    title: "Tools",
     icon: Wrench,
-    skills: ['VS Code', 'Git', 'Jupyter Notebooks', 'Power BI', 'Azure Data Factory'],
+    skills: [
+      "VS Code",
+      "Git",
+      "Jupyter Notebooks",
+      "Power BI",
+      "Azure Data Factory",
+    ],
   },
   {
-    title: 'Soft Skills',
+    title: "Soft Skills",
     icon: Users,
-    skills: ['Problem-Solving', 'Cross-functional Collaboration', 'Agile/Scrum', 'Technical Communication'],
+    skills: [
+      "Problem-Solving",
+      "Cross-functional Collaboration",
+      "Agile/Scrum",
+      "Technical Communication",
+    ],
   },
 ];
 
@@ -87,10 +120,48 @@ const Skills = () => {
               );
             })}
           </div>
+          <div
+            className="space-y-6 animate-slide-up"
+            style={{ animationDelay: "0.1s" }}
+          >
+            <Card className="gradient-card p-8 border-border/50 shadow-lg">
+              <div className="space-y-6">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <GraduationCap className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-bold">Education</h3>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="space-y-2 pb-6 border-b border-border/50">
+                    <h4 className="text-xl font-semibold text-primary">
+                      Master of Digital Transformation & Innovation
+                    </h4>
+                    <p className="text-foreground/80 font-medium">
+                      University of Ottawa
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Concentration: Data Science, Machine Learning, Data
+                      Analytics, Advanced Data Management
+                    </p>
+                  </div>
+
+                  <div className="space-y-2">
+                    <h4 className="text-xl font-semibold text-primary">
+                      Bachelor of Engineering, Computer Science
+                    </h4>
+                    <p className="text-foreground/80 font-medium">
+                      University of Jammu
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
   );
 };
-
 export default Skills;

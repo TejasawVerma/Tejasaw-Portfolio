@@ -10,65 +10,31 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold">
               About <span className="text-gradient">Me</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Passionate Machine Learning Engineer with 3+ years of experience transforming complex data into intelligent solutions
+            <p className="text-xl text-justify text-muted-foreground max-w-3xl mx-auto">
+              As an AI Analyst at JSI Telecom, I am currently focused on enhancing LLM throughput and optimizing LLM inference in resource-constrained environments.
+              My work involves developing Python benchmarking scripts and deploying secure LLM inference pipelines, working towards improved system efficiency and user support capabilities.
+            </p>
+            <p className="text-xl text-justify text-muted-foreground max-w-3xl mx-auto">
+              Previously, I served as a Data Engineer at Indigenous Box Inc, where I automated data synchronization and built Azure Data Factory pipelines, boosting data availability for analytics, 
+              and as a Machine Learning Engineer at Tomorrow Smile, researching and developing deep learning models for dental diagnostics. My academic background includes a Master's in Digital Transformation 
+              from the University of Ottawa, where I specialized in Data Science and AI/Machine Learning.
+            </p>
+            <p className="text-xl text-justify text-muted-foreground max-w-3xl mx-auto">
+              My technical expertise spans Machine Learning & Deep Learning (Scikit-learn, TensorFlow, PyTorch, Hugging Face Transformers), MLOps & Deployment (Azure ML Studio, Docker, Prometheus, Grafana), 
+              Cloud & Data Engineering (Azure Databricks, Data Factory, Functions, Synapse Analytics), and Visualization (Power BI), with strong proficiency in Python and SQL.
+            </p>
+            <p className="text-xl text-justify text-muted-foreground max-w-3xl mx-auto">
+              What sets me apart is my ability to translate complex data challenges into actionable insights, driving efficiency and innovation. I am passionate about leveraging my 
+              skills to contribute to impactful projects and am eager to bring my expertise to a forward-thinking organization. Let's connect to explore how I can add value to your team.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8 items-start">
             {/* Professional Summary */}
             <div className="space-y-6 animate-slide-up">
-              <Card className="gradient-card p-8 border-border/50 shadow-lg">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <Briefcase className="h-6 w-6 text-primary" />
-                    </div>
-                    <h3 className="text-2xl font-bold">Professional Journey</h3>
-                  </div>
-                  <p className="text-foreground/80 leading-relaxed">
-                    With over 3 years of comprehensive experience spanning AI/ML development, data engineering, 
-                    and software development, I specialize in building intelligent systems that drive real business impact.
-                  </p>
-                  <p className="text-foreground/80 leading-relaxed">
-                    My expertise lies in LLM inference optimization, deep learning with PyTorch, cloud ML deployment 
-                    on Azure, and building robust data pipelines that enable data-driven decision making.
-                  </p>
-                </div>
-              </Card>
-
-              <Card className="gradient-card p-8 border-border/50 shadow-lg">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <Code className="h-6 w-6 text-primary" />
-                    </div>
-                    <h3 className="text-2xl font-bold">Key Strengths</h3>
-                  </div>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                      <span className="text-foreground/80">LLM inference optimization & performance monitoring</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                      <span className="text-foreground/80">Deep learning with PyTorch</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                      <span className="text-foreground/80">Cloud ML deployment & MLOps on Azure</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                      <span className="text-foreground/80">Data pipeline development & automation</span>
-                    </li>
-                  </ul>
-                </div>
-              </Card>
             </div>
 
             {/* Education */}
-            <div className="space-y-6 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            {/* <div className="space-y-6 animate-slide-up" style={{ animationDelay: '0.1s' }}>
               <Card className="gradient-card p-8 border-border/50 shadow-lg">
                 <div className="space-y-6">
                   <div className="flex items-center gap-3 mb-6">
@@ -98,7 +64,7 @@ const About = () => {
                   </div>
                 </div>
               </Card>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

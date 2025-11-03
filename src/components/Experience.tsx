@@ -8,10 +8,10 @@ const experiences = [
     period: 'Jul 2025 - Present',
     icon: Brain,
     achievements: [
-      'Developed and deployed LLM inference benchmarking workflows using Python scripts, reducing manual testing time by 90%',
-      'Evaluated LLM inference pipelines by testing under GPU and memory constraints for resource-constrained environments',
+      'Developed benchmarking script using python and OpenAI API to test vLLM inference performance under GPU constraints, identifying Large Language Models prefill vs decode bottlenecks that directly informed resource allocation decisions for production deployment.',
+      'Implemented inference performance monitoring using Prometheus and Grafana dashboards, enabling accurate trade-off analysis of latency, throughput, and GPU utilization under varied user loads.',
       'Implemented end-to-end LLM inference performance monitoring using Prometheus and Grafana dashboards',
-      'Enhanced inference efficiency through quantization, achieving 30% throughput increase and sub-30s latency',
+      'Optimized inference efficiency through quantization and tuning vLLM parameters, gaining a 30% increase in throughput and lowering latency below 30 seconds.',
     ],
   },
   {
@@ -20,10 +20,10 @@ const experiences = [
     period: 'Aug 2024 - Dec 2024',
     icon: Database,
     achievements: [
-      'Implemented Azure Data Factory pipelines integrating sales, supplier, and customer datasets for real-time analytics',
-      'Deployed Python scripts on Azure Functions to automate data synchronization, eliminating 40+ hours of manual work monthly',
-      'Developed Power BI dashboards for Price Purchase Variance analysis, cutting stockouts by 18%',
-      'Collaborated with Operations and Finance teams to translate reporting needs into technical specifications',
+      'Implemented Azure Data Factory pipelines to integrate structured data (sales transactions) and unstructured data (supplier feeds, customer logs), enabling real-time analytics and improving data availability for reporting.',
+      'Deployed Python scripts on Azure Functions to automate data synchronization between sales and inventory systems.',
+      'Developed Power BI dashboards for Price Purchase Variance and Sales Order Root Cause Analysis, cutting stockouts by 18%.',
+      'Collaborated with Operations and Finance teams to translate reporting needs into clear technical specifications, enabling faster decision-making through tailored data solutions.',
     ],
   },
   {
@@ -32,10 +32,10 @@ const experiences = [
     period: 'Jan 2024 - Aug 2024',
     icon: Brain,
     achievements: [
-      'Developed UNET-based deep learning model using PyTorch for orthodontic landmark detection, achieving 90% accuracy',
-      'Implemented end-to-end preprocessing pipeline using VTK and NumPy, reducing manual preparation time by 75%',
-      'Developed visualization tool using VTK to display predicted landmarks and calculate arch length measurements',
-      'Collaborated with dental professionals to refine training data and establish acceptance criteria',
+      'Developed a UNET-based deep learning model using PyTorch framework in Python for orthodontic landmark detection on dental scans, achieving 90% accuracy through multi-view rendering, Dice-CE loss functions.',
+      'Implemented end-to-end preprocessing pipeline using VTK for image data normalization, surface scaling, and landmark transformation, reducing manual data preparation time by 75%.',
+      'Developed visualization tool using VTK library to display predicted landmarks on dental scans and calculate arch length measurements for orthodontic treatment assessment.',
+      'Collaborated with dental professionals to refine training data and establish acceptance criteria, improving model reliability and clinical relevance.',
     ],
   },
   {
@@ -44,10 +44,10 @@ const experiences = [
     period: 'Mar 2021 - Jan 2023',
     icon: Code2,
     achievements: [
-      'Delivered 20+ SAP ABAP enhancements across the SDLC, improving system functionality for business users',
-      'Optimized SQL queries in SAP custom reports by 40% through indexing and query refactoring',
-      'Debugged and resolved 200+ critical SAP issues, achieving 90% SLA compliance',
-      'Configured SAP bank setups using SFTP for seamless host-to-host integration',
+      'Delivered 20+ SAP ABAP enhancements across the SDLC, improving system functionality for business users by analyzing requirements, developing, testing, and implementing solutions.',
+      'Optimized SQL queries in SAP custom reports and smart forms by applying indexing, query refactoring, and join optimization, reducing query runtime by 40%.',
+      'Debugged and resolved 200+ critical SAP module issues using ABAP runtime analysis, SQL trace, and SAP Solution Manager, achieving 90% SLA compliance and cutting ticket backlog by 50% within 3 months.',
+      'Configured and implemented SAP bank setups using SFTP for seamless host-to-host bank integration, enabling bank statement data transfers for financial reporting.',
     ],
   },
 ];

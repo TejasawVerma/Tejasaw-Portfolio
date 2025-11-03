@@ -4,6 +4,13 @@ import { Button } from '@/components/ui/button';
 
 const certifications = [
   {
+    title: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
+    description:
+      'Supervised and unsupervised learning, CNNs, RNNs, LSTMs, Generative AI, and OCI AI services.',
+    link: 
+      'https://catalog-education.oracle.com/ords/certview/sharebadge?id=68DC650EB51E08DE8D51BEFBCF0BCDDEE395B47AF4E9A9CDA2102C2CBB261EA2',  
+  },
+  {
     title: 'Microsoft Azure Data Fundamentals - DP900',
     description:
       'Relational/non-relational data concepts, Azure data services (SQL Database, Cosmos DB, Synapse Analytics)',

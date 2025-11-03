@@ -1,4 +1,4 @@
-import { Mail, Phone, Linkedin, FileDown, ArrowDown, User } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, FileDown, ArrowDown, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-bg.png';
 import headshotImage from '@/assets/headshot.jpg';
@@ -71,6 +71,15 @@ const Hero = () => {
               <Linkedin className="h-5 w-5" />
               LinkedIn
             </a>
+            <a
+              href="https://github.com/TejasawVerma"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors"
+            >
+              <Github className="h-5 w-5" />
+              GitHub
+            </a>
           </div>
 
           {/* CTA Buttons */}
@@ -88,11 +97,9 @@ const Hero = () => {
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = 'https://drive.google.com/uc?export=download&id=1S1J97vdh1Zaer28Ha3ZPnPOhw4m_Rimo'; // replace with your file URL
-                link.download = 'Tejasaw_Verma_Resume.docx'; // optional: specify the filename
+                link.href = 'https://drive.google.com/uc?export=download&id=1kUREpnvG4pJLhzHcR2mGbEZhsaOgvvyv'; // replace with your file URL
+                // link.download = 'Tejasaw_Verma_Resume.docx'; // optional: specify the filename
                 link.click();
-                // In a real app, this would download the actual resume file
-                // alert('Resume download functionality would be implemented here');
               }}
             >
               <FileDown className="mr-2 h-5 w-5" />
